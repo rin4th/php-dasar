@@ -12,6 +12,9 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <body>
   <h1>Daftar Mahasiswa</h1>
 
+  <a href="tambah.php">Tambah data Mahasiswa</a>
+  <br><br>
+
   <table border="1" cellspacing="0" cellpadding="10">
     <tr>
       <td>No.</td>
@@ -25,7 +28,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     <?php foreach($mahasiswa as $row): ?>
     <tr>
       <td><?= $i?></td>
-      <td><a href="#">update</a> | <a href="#">delete</a></td>
+      <td><a href="#">update</a> | <a href="hapus.php?id=<?= $row["id"];?>" onclick="return confirm('yakin');">delete</a></td>
       <td><img src="img/<?= $row["gambar"];?>"></td>
       <td><?= $row["nama"];?></td>
       <td><?= $row["nim"];?></td>
