@@ -1,6 +1,7 @@
 <?php
 $db = mysqli_connect("localhost", "rin", "zal0192++!!", "phpdasar");
 
+// connect mysqli
 function query($query){
   global $db;
   $result = mysqli_query($db, $query);
