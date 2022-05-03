@@ -41,7 +41,7 @@ if (isset($_POST["search"])){
     <tr>
       <td><?= $i?></td>
       <td><a href="update.php?id=<?= $row["id"];?>">update</a> | <a href="hapus.php?id=<?= $row["id"];?>" onclick="return confirm('yakin');">delete</a></td>
-      <td><img src="img/<?= $row["gambar"];?>"></td>
+      <td><img src="../img/<?= $row["gambar"];?>"></td>
       <td><?= $row["nama"];?></td>
       <td><?= $row["nim"];?></td>
       <td><?= $row["jurusan"];?></td>
